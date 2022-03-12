@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txtAppCofre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AppCofre"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/txtServico"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/txtServico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Serviço:"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@id/edtServico" />
+        <EditText
+            android:id="@+id/edtServico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@id/txtUsuario" />
+        <TextView
+            android:id="@+id/txtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usuário:"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@id/edtUsuario" />
+        <EditText
+            android:id="@+id/edtUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@id/txtSenha" />
+        <TextView
+            android:id="@+id/txtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Senha:"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintBottom_toTopOf="@id/edtSenha"
+            />
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toTopOf="@id/btnAnterior"
+            />
+        <Button
+            android:id="@+id/btnAnterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anterior"
+            app:layout_constraintBottom_toTopOf="@id/btnCadastrar"
+            app:layout_constraintEnd_toStartOf="@+id/btnNovo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btnNovo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickBtnNovo"
+            android:text="Novo"
+            app:layout_constraintBottom_toTopOf="@id/btnCadastrar"
+            app:layout_constraintEnd_toStartOf="@+id/btnProximo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnAnterior" />
+        <Button
+            android:id="@+id/btnProximo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximo"
+            app:layout_constraintBottom_toTopOf="@id/btnCadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnNovo" />
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Cadastrar"
+            android:onClick="clickBtnCadastrar"
+            app:layout_constraintBottom_toTopOf="@id/btnAlterar"
+            tools:layout_editor_absoluteX="10dp" />
+        <Button
+            android:id="@+id/btnAlterar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Alterar"
+            android:onClick="clickBtnAlterar"
+            app:layout_constraintBottom_toTopOf="@id/btnDeletar"
+            tools:layout_editor_absoluteX="10dp" />
+        <Button
+            android:id="@+id/btnDeletar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Deletar"
+            android:onClick="clickBtnDeletar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="10dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
